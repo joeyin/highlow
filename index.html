@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" />
+  <title>HighLow</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="lose" class="modal hidden">LOSE</div>
+  <div id="win" class="modal hidden">WIN</div>
+  <header class="flex">
+    <a class="brand" href="#" title="HighLow">HighLow</a>
+  </header>
+  <main class="w-full absolute overflow-hidden">
+    <div id="stage" class="absolute">
+      <div id="frame" class="flex justify-center items-center">
+        <h1>HighLow</h1>
+      </div>
+      <div id="chip-tray"></div>
+    </div>
+    <button id="start" class="flex absolute items-center justify-center">Start Game</button>
+    <div id="panel" class="flex absolute">
+      <button type="button" id="allin">all in</button>
+      <div class="flex flex-row items-center justify-center">
+        <span class="title">Bet:</span>
+        <button id="minus">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+        </button>
+        <input id="bet" type="number" min="10" max="1000" value="10">
+        <button id="plus">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg>
+        </button>
+      </div>
+      <div class="flex flex-row items-center justify-center">
+        <span class="title">Balance:</span>
+        <span id="balance"></span>
+      </div>
+      <button id="higher" disabled>higher</button>
+      <button id="lower" disabled>lower</button>
+    </div>
+  </main>
+  <script src="./script/jquery.min.js"></script>
+  <script src="./script/highlow.js"></script>
+  <script src="./script/script.js"></script>
+</body>
+</html>
